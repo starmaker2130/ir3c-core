@@ -864,17 +864,36 @@ Leap.loop({background: true}, {
         let obj = objectManager;
         if(sessionManager.pressed==null){
           sessionManager.pressed = [];
+          sessionManager.pressCount == -1;
         }
 
         if(hand.indexFinger.extended){
             let indexPos = hand.indexFinger.distal.center();
             if(indexPos[0]>95&&indexPos[0]<115&&indexPos[1]>195&&indexPos[1]<220){
               //console.log("P");
-              sessionManager.pressed.push("P");
+              sessionManager.pressed.push("P", sessionManager.pressCount);
               if(sessionManager.pressed.indexOf("P")>-1){
                   document.getElementById("letter-p-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-p-container").setAttribute("text", "color", "black");
                   console.log("holding down P");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){ /* approximately 25 cycles per 1000 ms */
+                      console.log("pressed P");
+                      document.getElementById("letter-p-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-p-container").setAttribute("text", "color", "white");
+
+                    }
+                    if(sessionManager.pressCount>75){
+                      console.log("long pressed P");
+                      document.getElementById("letter-p-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-p-container").setAttribute("text", "color", "black");
+
+                    }
+                  }
               }
 
             }
@@ -885,6 +904,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-o-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-o-container").setAttribute("text", "color", "black");
                   console.log("holding down O");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed O");
+                      document.getElementById("letter-o-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-o-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed O");
+                      document.getElementById("letter-o-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-o-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>40&&indexPos[0]<60&&indexPos[1]>190&&indexPos[1]<220){
@@ -894,6 +929,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-i-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-i-container").setAttribute("text", "color", "black");
                   console.log("holding down I");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed I");
+                      document.getElementById("letter-i-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-i-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed I");
+                      document.getElementById("letter-i-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-i-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>15&&indexPos[0]<35&&indexPos[1]>190&&indexPos[1]<220){
@@ -903,6 +954,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-u-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-u-container").setAttribute("text", "color", "black");
                   console.log("holding down U");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed U");
+                      document.getElementById("letter-u-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-u-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed U");
+                      document.getElementById("letter-u-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-u-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-12&&indexPos[0]<10&&indexPos[1]>190&&indexPos[1]<220){
@@ -912,6 +979,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-y-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-y-container").setAttribute("text", "color", "black");
                   console.log("holding down Y");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed Y");
+                      document.getElementById("letter-y-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-y-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed Y");
+                      document.getElementById("letter-y-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-y-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-43&&indexPos[0]<-17&&indexPos[1]>190&&indexPos[1]<220){
@@ -921,6 +1004,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-t-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-t-container").setAttribute("text", "color", "black");
                   console.log("holding down T");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed T");
+                      document.getElementById("letter-t-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-t-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed T");
+                      document.getElementById("letter-t-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-t-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-70&&indexPos[0]<-48&&indexPos[1]>190&&indexPos[1]<220){
@@ -930,6 +1029,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-r-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-r-container").setAttribute("text", "color", "black");
                   console.log("holding down R");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed R");
+                      document.getElementById("letter-r-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-r-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed R");
+                      document.getElementById("letter-r-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-r-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-95&&indexPos[0]<-75&&indexPos[1]>190&&indexPos[1]<220){
@@ -938,7 +1053,23 @@ Leap.loop({background: true}, {
               if(sessionManager.pressed.indexOf("E")>-1){
                   document.getElementById("letter-e-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-e-container").setAttribute("text", "color", "black");
-                  console.log("holding down S");
+                  console.log("holding down E");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed E");
+                      document.getElementById("letter-e-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-e-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed E");
+                      document.getElementById("letter-e-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-e-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-130&&indexPos[0]<-105&&indexPos[1]>190&&indexPos[1]<220){
@@ -948,6 +1079,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-w-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-w-container").setAttribute("text", "color", "black");
                   console.log("holding down W");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed W");
+                      document.getElementById("letter-w-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-w-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed W");
+                      document.getElementById("letter-w-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-w-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-155&&indexPos[0]<-135&&indexPos[1]>190&&indexPos[1]<220){
@@ -956,7 +1103,23 @@ Leap.loop({background: true}, {
               if(sessionManager.pressed.indexOf("Q")>-1){
                   document.getElementById("letter-q-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-q-container").setAttribute("text", "color", "black");
-                  console.log("holding down O");
+                  console.log("holding down Q");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed Q");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed Q");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-195&&indexPos[0]<-160&&indexPos[1]>190&&indexPos[1]<220){
@@ -966,6 +1129,22 @@ Leap.loop({background: true}, {
                   document.getElementById("system-tab-container").setAttribute("material", "color", "white");
                   document.getElementById("system-tab-container").setAttribute("text", "color", "black");
                   console.log("holding down tab");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed tab");
+                      document.getElementById("system-tab-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-tab-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed tab");
+                      document.getElementById("system-tab-container").setAttribute("material", "color", "orange");
+                      document.getElementById("system-tab-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>95&&indexPos[0]<115&&indexPos[1]>165&&indexPos[1]<180){
@@ -975,6 +1154,23 @@ Leap.loop({background: true}, {
                   document.getElementById("punctuation-colon-container").setAttribute("material", "color", "white");
                   document.getElementById("punctuation-colon-container").setAttribute("text", "color", "black");
                   console.log("holding down :");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed :");
+
+                      document.getElementById("punctuation-colon-container").setAttribute("material", "color", "red");
+                      document.getElementById("punctuation-colon-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed :");
+                      document.getElementById("punctuation-colon-container").setAttribute("material", "color", "orange");
+                      document.getElementById("punctuation-colon-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
 
             }
@@ -985,6 +1181,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-l-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-l-container").setAttribute("text", "color", "black");
                   console.log("holding down L");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed L");
+                      document.getElementById("letter-l-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-l-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed L");
+                      document.getElementById("letter-l-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-l-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>40&&indexPos[0]<60&&indexPos[1]>165&&indexPos[1]<180){
@@ -994,6 +1206,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-k-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-k-container").setAttribute("text", "color", "black");
                   console.log("holding down K");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed K");
+                      document.getElementById("letter-k-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-k-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed K");
+                      document.getElementById("letter-k-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-k-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>15&&indexPos[0]<35&&indexPos[1]>165&&indexPos[1]<180){
@@ -1003,6 +1231,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-j-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-j-container").setAttribute("text", "color", "black");
                   console.log("holding down J");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed J");
+                      document.getElementById("letter-j-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-j-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed J");
+                      document.getElementById("letter-j-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-j-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-12&&indexPos[0]<10&&indexPos[1]>165&&indexPos[1]<180){
@@ -1012,6 +1256,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-h-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-h-container").setAttribute("text", "color", "black");
                   console.log("holding down H");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed H");
+                      document.getElementById("letter-h-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-h-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed H");
+                      document.getElementById("letter-h-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-h-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-43&&indexPos[0]<-17&&indexPos[1]>165&&indexPos[1]<180){
@@ -1021,6 +1281,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-g-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-g-container").setAttribute("text", "color", "black");
                   console.log("holding down G");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed G");
+                      document.getElementById("letter-g-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-g-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed G");
+                      document.getElementById("letter-g-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-g-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-70&&indexPos[0]<-48&&indexPos[1]>165&&indexPos[1]<180){
@@ -1030,6 +1306,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-f-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-f-container").setAttribute("text", "color", "black");
                   console.log("holding down F");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed F");
+                      document.getElementById("letter-f-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-f-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed F");
+                      document.getElementById("letter-f-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-f-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-95&&indexPos[0]<-75&&indexPos[1]>165&&indexPos[1]<180){
@@ -1039,6 +1331,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-d-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-d-container").setAttribute("text", "color", "black");
                   console.log("holding down D");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed D");
+                      document.getElementById("letter-d-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-d-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed D");
+                      document.getElementById("letter-d-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-d-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-130&&indexPos[0]<-105&&indexPos[1]>165&&indexPos[1]<180){
@@ -1048,6 +1356,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-s-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-s-container").setAttribute("text", "color", "black");
                   console.log("holding down S");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed S");
+                      document.getElementById("letter-s-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-s-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed S");
+                      document.getElementById("letter-s-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-s-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-155&&indexPos[0]<-135&&indexPos[1]>165&&indexPos[1]<180){
@@ -1057,6 +1381,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-a-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-a-container").setAttribute("text", "color", "black");
                   console.log("holding down A");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed A");
+                      document.getElementById("letter-a-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-a-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed A");
+                      document.getElementById("letter-a-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-a-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-195&&indexPos[0]<-160&&indexPos[1]>165&&indexPos[1]<180){
@@ -1065,7 +1405,22 @@ Leap.loop({background: true}, {
               if(sessionManager.pressed.indexOf("caps-lock")>-1){
                   document.getElementById("system-capslock-container").setAttribute("material", "color", "white");
                   document.getElementById("system-capslock-container").setAttribute("text", "color", "black");
-                  console.log("holding down caps lock");
+                  console.log("holding down caps lock");\if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed caps lock");
+                      document.getElementById("system-capslock-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-capslock-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed caps lock");
+                      document.getElementById("system-capslock-container").setAttribute("material", "color", "orange");
+                      document.getElementById("system-capslock-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>95&&indexPos[0]<115&&indexPos[1]>135&&indexPos[1]<160){
@@ -1075,6 +1430,22 @@ Leap.loop({background: true}, {
                   document.getElementById("punctuation-question-container").setAttribute("material", "color", "white");
                   document.getElementById("punctuation-question-container").setAttribute("text", "color", "black");
                   console.log("holding down ?");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed ?");
+                      document.getElementById("punctuation-question-container").setAttribute("material", "color", "red");
+                      document.getElementById("punctuation-question-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed ?");
+                      document.getElementById("punctuation-question-container").setAttribute("material", "color", "orange");
+                      document.getElementById("punctuation-question-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
 
             }
@@ -1085,6 +1456,22 @@ Leap.loop({background: true}, {
                   document.getElementById("symbol-greaterthan-container").setAttribute("material", "color", "white");
                   document.getElementById("symbol-greaterthan-container").setAttribute("text", "color", "black");
                   console.log("holding down greater than|period");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed >|.");
+                      document.getElementById("symbol-greaterthan-container").setAttribute("material", "color", "red");
+                      document.getElementById("symbol-greaterthan-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed >|.");
+                      document.getElementById("symbol-greaterthan-container").setAttribute("material", "color", "orange");
+                      document.getElementById("symbol-greaterthan-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>40&&indexPos[0]<60&&indexPos[1]>135&&indexPos[1]<160){
@@ -1094,6 +1481,22 @@ Leap.loop({background: true}, {
                   document.getElementById("symbol-lessthan-container").setAttribute("material", "color", "white");
                   document.getElementById("symbol-lessthan-container").setAttribute("text", "color", "black");
                   console.log("holding down less than|comma");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed <|,");
+                      document.getElementById("symbol-lessthan-container").setAttribute("material", "color", "red");
+                      document.getElementById("symbol-lessthan-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed <|,");
+                      document.getElementById("symbol-lessthan-container").setAttribute("material", "color", "orange");
+                      document.getElementById("symbol-lessthan-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>15&&indexPos[0]<35&&indexPos[1]>135&&indexPos[1]<160){
@@ -1103,6 +1506,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-m-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-m-container").setAttribute("text", "color", "black");
                   console.log("holding down M");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed M");
+                      document.getElementById("letter-m-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-m-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed M");
+                      document.getElementById("letter-m-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-m-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-12&&indexPos[0]<10&&indexPos[1]>135&&indexPos[1]<160){
@@ -1112,6 +1531,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-n-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-n-container").setAttribute("text", "color", "black");
                   console.log("holding down N");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed N");
+                      document.getElementById("letter-n-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-n-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed N");
+                      document.getElementById("letter-n-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-n-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-43&&indexPos[0]<-17&&indexPos[1]>135&&indexPos[1]<160){
@@ -1121,6 +1556,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-b-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-b-container").setAttribute("text", "color", "black");
                   console.log("holding down B");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed B");
+                      document.getElementById("letter-b-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-b-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed B");
+                      document.getElementById("letter-b-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-b-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-70&&indexPos[0]<-48&&indexPos[1]>135&&indexPos[1]<160){
@@ -1130,6 +1581,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-v-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-v-container").setAttribute("text", "color", "black");
                   console.log("holding down V");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed V");
+                      document.getElementById("letter-v-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-v-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed V");
+                      document.getElementById("letter-v-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-v-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-95&&indexPos[0]<-75&&indexPos[1]>135&&indexPos[1]<160){
@@ -1148,6 +1615,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-x-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-x-container").setAttribute("text", "color", "black");
                   console.log("holding down X");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed X");
+                      document.getElementById("letter-x-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-x-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed X");
+                      document.getElementById("letter-x-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-x-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-155&&indexPos[0]<-135&&indexPos[1]>135&&indexPos[1]<160){
@@ -1157,6 +1640,22 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-z-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-z-container").setAttribute("text", "color", "black");
                   console.log("holding down Z");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed Z");
+                      document.getElementById("letter-z-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-z-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed Z");
+                      document.getElementById("letter-z-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-z-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-195&&indexPos[0]<-160&&indexPos[1]>135&&indexPos[1]<160){
@@ -1166,6 +1665,22 @@ Leap.loop({background: true}, {
                   document.getElementById("system-leftshift-container").setAttribute("material", "color", "white");
                   document.getElementById("system-leftshift-container").setAttribute("text", "color", "black");
                   console.log("holding down left shift");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed shift");
+                      document.getElementById("system-leftshift-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-leftshift-container").setAttribute("text", "color", "white");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed shift");
+                      document.getElementById("system-leftshift-container").setAttribute("material", "color", "orange");
+                      document.getElementById("system-leftshift-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>165&&indexPos[0]<185&&indexPos[1]>105&&indexPos[1]<130){
@@ -1174,7 +1689,23 @@ Leap.loop({background: true}, {
                 if(sessionManager.pressed.indexOf("RD")>-1){
                     document.getElementById("dpad-right-container").setAttribute("material", "color", "white");
                     document.getElementById("dpad-right-container").setAttribute("text", "color", "black");
-                    console.log("holding down RD");
+                    //console.log("holding down RD");
+                    if(sessionManager.pressCount==null){
+                      sessionManager.pressCount = -1;
+                    }
+                    else if(sessionManager.pressCount >= -1){
+                      sessionManager.pressCount++;
+                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                        console.log("pressed RD");
+                        document.getElementById("dpad-right-container").setAttribute("material", "color", "red");
+                        document.getElementById("dpad-right-container").setAttribute("text", "color", "white");
+                      }
+                      if(sessionManager.pressCount>150){
+                        console.log("long pressed RD");
+                        document.getElementById("dpad-right-container").setAttribute("material", "color", "orange");
+                        document.getElementById("dpad-right-container").setAttribute("text", "color", "black");
+                      }
+                    }
                 }
             }
             else if(indexPos[0]>143&&indexPos[0]<160&&indexPos[1]>95&&indexPos[1]<120){
@@ -1183,7 +1714,23 @@ Leap.loop({background: true}, {
                 if(sessionManager.pressed.indexOf("DD")>-1){
                     document.getElementById("dpad-down-container").setAttribute("material", "color", "white");
                     document.getElementById("dpad-down-container").setAttribute("text", "color", "black");
-                    console.log("holding down DD");
+                    //console.log("holding down DD");
+                    if(sessionManager.pressCount==null){
+                      sessionManager.pressCount = -1;
+                    }
+                    else if(sessionManager.pressCount >= -1){
+                      sessionManager.pressCount++;
+                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                        console.log("pressed DD");
+                        document.getElementById("dpad-down-container").setAttribute("material", "color", "red");
+                        document.getElementById("dpad-down-container").setAttribute("text", "color", "white");
+                      }
+                      if(sessionManager.pressCount>150){
+                        console.log("long pressed DD");
+                        document.getElementById("dpad-down-container").setAttribute("material", "color", "orange");
+                        document.getElementById("dpad-down-container").setAttribute("text", "color", "black");
+                      }
+                    }
                 }
             }
             else if(indexPos[0]>143&&indexPos[0]<160&&indexPos[1]>125&&indexPos[1]<145){
@@ -1193,6 +1740,22 @@ Leap.loop({background: true}, {
                     document.getElementById("dpad-up-container").setAttribute("material", "color", "white");
                     document.getElementById("dpad-up-container").setAttribute("text", "color", "black");
                     console.log("holding down UD");
+                    if(sessionManager.pressCount==null){
+                      sessionManager.pressCount = -1;
+                    }
+                    else if(sessionManager.pressCount >= -1){
+                      sessionManager.pressCount++;
+                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                        console.log("pressed UD");
+                        document.getElementById("dpad-up-container").setAttribute("material", "color", "red");
+                        document.getElementById("dpad-up-container").setAttribute("text", "color", "white");
+                      }
+                      if(sessionManager.pressCount>150){
+                        console.log("long pressed UD");
+                        document.getElementById("dpad-up-container").setAttribute("material", "color", "orange");
+                        document.getElementById("dpad-up-container").setAttribute("text", "color", "black");
+                      }
+                    }
                 }
             }
             else if(indexPos[0]>120&&indexPos[0]<140&&indexPos[1]>105&&indexPos[1]<130){
@@ -1202,6 +1765,22 @@ Leap.loop({background: true}, {
                     document.getElementById("dpad-left-container").setAttribute("material", "color", "white");
                     document.getElementById("dpad-left-container").setAttribute("text", "color", "black");
                     console.log("holding down LD");
+                    if(sessionManager.pressCount==null){
+                      sessionManager.pressCount = -1;
+                    }
+                    else if(sessionManager.pressCount >= -1){
+                      sessionManager.pressCount++;
+                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                        console.log("pressed LD");
+                        document.getElementById("dpad-left-container").setAttribute("material", "color", "red");
+                        document.getElementById("dpad-left-container").setAttribute("text", "color", "white");'
+                      }
+                      if(sessionManager.pressCount>150){
+                        console.log("long pressed LD");
+                        document.getElementById("dpad-left-container").setAttribute("material", "color", "orange");
+                        document.getElementById("dpad-left-container").setAttribute("text", "color", "black");
+                      }
+                    }
                 }
             }
             else if(indexPos[0]>95&&indexPos[0]<115&&indexPos[1]>105&&indexPos[1]<130){
@@ -1211,6 +1790,22 @@ Leap.loop({background: true}, {
                     document.getElementById("system-rightoption-container").setAttribute("material", "color", "white");
                     document.getElementById("system-rightoption-container").setAttribute("text", "color", "black");
                     console.log("holding down ROPT");
+                    if(sessionManager.pressCount==null){
+                      sessionManager.pressCount = -1;
+                    }
+                    else if(sessionManager.pressCount >= -1){
+                      sessionManager.pressCount++;
+                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                        console.log("pressed ROPT");
+                        document.getElementById("system-rightoption-container").setAttribute("material", "color", "red");
+                        document.getElementById("system-rightoption-container").setAttribute("text", "color", "white");
+                      }
+                      if(sessionManager.pressCount>150){
+                        console.log("long pressed ROPT");
+                        document.getElementById("system-rightoption-container").setAttribute("material", "color", "orange");
+                        document.getElementById("system-rightoption-container").setAttribute("text", "color", "black");
+                      }
+                    }
                 }
             }
             else if(indexPos[0]>65&&indexPos[0]<90&&indexPos[1]>105&&indexPos[1]<130){
@@ -1220,6 +1815,22 @@ Leap.loop({background: true}, {
                     document.getElementById("system-rightcommand-container").setAttribute("material", "color", "white");
                     document.getElementById("system-rightcommand-container").setAttribute("text", "color", "black");
                     console.log("holding down RCMD");
+                    if(sessionManager.pressCount==null){
+                      sessionManager.pressCount = -1;
+                    }
+                    else if(sessionManager.pressCount >= -1){
+                      sessionManager.pressCount++;
+                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                        console.log("pressed RCMD");
+                        document.getElementById("system-rightcommand-container").setAttribute("material", "color", "red");
+                        document.getElementById("system-rightcommand-container").setAttribute("text", "color", "white");
+                      }
+                      if(sessionManager.pressCount>150){
+                        console.log("long pressed RCMD");
+                        document.getElementById("system-rightcommand-container").setAttribute("material", "color", "orange");
+                        document.getElementById("system-rightcommand-container").setAttribute("text", "color", "black");
+                      }
+                    }
                 }
             }
             else if(indexPos[0]>-85&&indexPos[0]<60&&indexPos[1]>105&&indexPos[1]<130){
@@ -1229,6 +1840,20 @@ Leap.loop({background: true}, {
                   document.getElementById("space-bar-container").setAttribute("material", "color", "white");
                   document.getElementById("space-bar-container").setAttribute("text", "color", "black");
                   console.log("holding down SPCE");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed SPCE");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed SPCE");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-105&&indexPos[0]<-90&&indexPos[1]>105&&indexPos[1]<130){
@@ -1238,6 +1863,20 @@ Leap.loop({background: true}, {
                   document.getElementById("system-leftcommand-container").setAttribute("material", "color", "white");
                   document.getElementById("system-leftcommand-container").setAttribute("text", "color", "black");
                   console.log("holding down left CMD button");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed CMD");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed CMD");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-130&&indexPos[0]<-110&&indexPos[1]>105&&indexPos[1]<130){
@@ -1247,6 +1886,20 @@ Leap.loop({background: true}, {
                   document.getElementById("system-leftoption-container").setAttribute("material", "color", "white");
                   document.getElementById("system-leftoption-container").setAttribute("text", "color", "black");
                   console.log("holding downleft OPTION button");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed OPTION");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed OPTION");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-155&&indexPos[0]<-135&&indexPos[1]>105&&indexPos[1]<130){
@@ -1256,6 +1909,20 @@ Leap.loop({background: true}, {
                   document.getElementById("system-leftcontrol-container").setAttribute("material", "color", "white");
                   document.getElementById("system-leftcontrol-container").setAttribute("text", "color", "black");
                   console.log("holding down left CTRL button");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed CTRL");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed CTRL");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-195&&indexPos[0]<-160&&indexPos[1]>105&&indexPos[1]<130){
@@ -1265,12 +1932,27 @@ Leap.loop({background: true}, {
                   document.getElementById("system-function-container").setAttribute("material", "color", "white");
                   document.getElementById("system-function-container").setAttribute("text", "color", "black");
                   console.log("holding down FN button");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      console.log("pressed FN");
+                    }
+                    if(sessionManager.pressCount>150){
+                      console.log("long pressed FN");
+                      document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-q-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else{
               console.log(indexPos[1]);
               if(sessionManager.pressed.length>0){
                 sessionManager.pressed = [];
+                sessionManager.pressCount = -1;
                 let buttons = document.getElementsByClassName("keyboard-button-container");
                 for(var q=0; q<buttons.length; q++){
                   (function(){
@@ -1341,6 +2023,9 @@ Leap.loop({background: true}, {
         boneMeshes: null
       });
     });
+
+    sessionManager.pressCount == -1;
+    sessionManager.pressed = [];
 
     renderer.render(scene, camera);
 })
