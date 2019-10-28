@@ -888,6 +888,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-p-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("P");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -918,6 +925,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-o-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("O");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -946,6 +960,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-i-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("I");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -974,6 +995,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-u-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("U");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1002,6 +1030,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-y-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("Y");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1030,6 +1065,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-t-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("T");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1058,6 +1100,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-r-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("R");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1086,6 +1135,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-e-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("E");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1114,6 +1170,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-w-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("W");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1142,6 +1205,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-q-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("Q");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1199,6 +1269,13 @@ Leap.loop({background: true}, {
                       document.getElementById("punctuation-colon-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push(":");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1228,6 +1305,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-l-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("L");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1256,6 +1340,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-k-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("K");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1284,6 +1375,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-j-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("J");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1312,6 +1410,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-h-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("H");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1340,6 +1445,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-g-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("G");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1368,6 +1480,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-f-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("F");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1396,6 +1515,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-d-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("D");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1424,6 +1550,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-s-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("S");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1452,6 +1585,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-a-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("A");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1508,6 +1648,13 @@ Leap.loop({background: true}, {
                       document.getElementById("punctuation-question-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("?");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1537,6 +1684,13 @@ Leap.loop({background: true}, {
                       document.getElementById("symbol-greaterthan-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push(">");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1565,6 +1719,13 @@ Leap.loop({background: true}, {
                       document.getElementById("symbol-lessthan-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("<");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1593,6 +1754,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-m-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("M");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1621,6 +1789,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-n-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("N");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1649,6 +1824,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-b-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("B");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1677,6 +1859,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-v-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("V");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1705,6 +1894,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-c-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("C");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1733,6 +1929,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-x-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("X");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1761,6 +1964,13 @@ Leap.loop({background: true}, {
                       document.getElementById("letter-z-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push("Z");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
@@ -1985,6 +2195,13 @@ Leap.loop({background: true}, {
                       document.getElementById("space-bar-container").setAttribute("text", "color", "white");
                       if(sessionManager.pressCount==26){
                         sessionManager.outputTextStream.push(" ");
+                        let textStream = ""
+                        for(var streamSize = 0; streamSize<sessionManager.outputTextStream.length;streamSize++){
+                            (function(){
+                              textStream+=sessionManager.outputTextStream[streamSize];
+                            })();
+                        }
+                        document.getElementById("output-display-container").setAttribute("text", "value", textStream);
                       }
                     }
                     if(sessionManager.pressCount>75){
