@@ -63,7 +63,37 @@ app.get('/', function(req, res){
         deviceType = 'mobile';
     }
 
-    res.render('augrstudio.html',{root: dir[0]});
+    res.render('index.html',{root: dir[0]});
+});
+
+app.get('/keyboARd', function(req, res){
+    var result = new WhichBrowser(req.headers);
+    console.log(result.toString());
+    if(result.isType('desktop')){
+        console.log('This is a desktop computer.');
+        deviceType = 'desktop';
+    }
+    else{
+        console.log('This is a mobile device.');
+        deviceType = 'mobile';
+    }
+
+    res.render('keyboARd.html',{root: dir[0]});
+});
+
+app.get('/keyboard', function(req, res){
+    var result = new WhichBrowser(req.headers);
+    console.log(result.toString());
+    if(result.isType('desktop')){
+        console.log('This is a desktop computer.');
+        deviceType = 'desktop';
+    }
+    else{
+        console.log('This is a mobile device.');
+        deviceType = 'mobile';
+    }
+
+    res.render('keyboARd.html',{root: dir[0]});
 });
 
 app.get('/game', function(req, res){
@@ -79,36 +109,6 @@ app.get('/game', function(req, res){
     }
 
     res.render('game.html',{root: dir[0]});
-});
-
-app.get('/shuttle', function(req, res){
-    var result = new WhichBrowser(req.headers);
-    console.log(result.toString());
-    if(result.isType('desktop')){
-        console.log('This is a desktop computer.');
-        deviceType = 'desktop';
-    }
-    else{
-        console.log('This is a mobile device.');
-        deviceType = 'mobile';
-    }
-
-    res.render('shuttle.html',{root: dir[0]});
-});
-
-app.get('/saturnv', function(req, res){
-    var result = new WhichBrowser(req.headers);
-    console.log(result.toString());
-    if(result.isType('desktop')){
-        console.log('This is a desktop computer.');
-        deviceType = 'desktop';
-    }
-    else{
-        console.log('This is a mobile device.');
-        deviceType = 'mobile';
-    }
-
-    res.render('saturnv.html',{root: dir[0]});
 });
 
 app.get('/css/:stylesheet_id', function(req, res){
