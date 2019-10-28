@@ -14,6 +14,7 @@ var sessionManager = {
     pressed: null,
     statusShown: false,
     screenCount: 1,
+    outputTextStream: []
 };
 
 var objectManager = {
@@ -885,7 +886,9 @@ Leap.loop({background: true}, {
                       console.log("pressed P");
                       document.getElementById("letter-p-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-p-container").setAttribute("text", "color", "white");
-
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("P");
+                      }
                     }
                     if(sessionManager.pressCount>75){
                       console.log("long pressed P");
@@ -909,12 +912,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed O");
                       document.getElementById("letter-o-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-o-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("O");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed O");
                       document.getElementById("letter-o-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-o-container").setAttribute("text", "color", "black");
@@ -934,12 +940,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed I");
                       document.getElementById("letter-i-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-i-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("I");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed I");
                       document.getElementById("letter-i-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-i-container").setAttribute("text", "color", "black");
@@ -959,12 +968,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed U");
                       document.getElementById("letter-u-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-u-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("U");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed U");
                       document.getElementById("letter-u-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-u-container").setAttribute("text", "color", "black");
@@ -984,12 +996,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed Y");
                       document.getElementById("letter-y-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-y-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("Y");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed Y");
                       document.getElementById("letter-y-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-y-container").setAttribute("text", "color", "black");
@@ -1009,12 +1024,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed T");
                       document.getElementById("letter-t-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-t-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("T");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed T");
                       document.getElementById("letter-t-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-t-container").setAttribute("text", "color", "black");
@@ -1034,12 +1052,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed R");
                       document.getElementById("letter-r-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-r-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("R");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed R");
                       document.getElementById("letter-r-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-r-container").setAttribute("text", "color", "black");
@@ -1059,12 +1080,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed E");
                       document.getElementById("letter-e-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-e-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("E");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed E");
                       document.getElementById("letter-e-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-e-container").setAttribute("text", "color", "black");
@@ -1084,12 +1108,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed W");
                       document.getElementById("letter-w-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-w-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("W");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed W");
                       document.getElementById("letter-w-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-w-container").setAttribute("text", "color", "black");
@@ -1109,12 +1136,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed Q");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("Q");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed Q");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "black");
@@ -1134,12 +1164,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed tab");
                       document.getElementById("system-tab-container").setAttribute("material", "color", "red");
                       document.getElementById("system-tab-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("tab");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed tab");
                       document.getElementById("system-tab-container").setAttribute("material", "color", "orange");
                       document.getElementById("system-tab-container").setAttribute("text", "color", "black");
@@ -1159,13 +1192,16 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed :");
 
                       document.getElementById("punctuation-colon-container").setAttribute("material", "color", "red");
                       document.getElementById("punctuation-colon-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push(":");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed :");
                       document.getElementById("punctuation-colon-container").setAttribute("material", "color", "orange");
                       document.getElementById("punctuation-colon-container").setAttribute("text", "color", "black");
@@ -1186,12 +1222,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed L");
                       document.getElementById("letter-l-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-l-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("L");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed L");
                       document.getElementById("letter-l-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-l-container").setAttribute("text", "color", "black");
@@ -1211,12 +1250,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed K");
                       document.getElementById("letter-k-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-k-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("K");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed K");
                       document.getElementById("letter-k-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-k-container").setAttribute("text", "color", "black");
@@ -1236,12 +1278,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed J");
                       document.getElementById("letter-j-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-j-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("J");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed J");
                       document.getElementById("letter-j-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-j-container").setAttribute("text", "color", "black");
@@ -1261,12 +1306,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed H");
                       document.getElementById("letter-h-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-h-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("H");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed H");
                       document.getElementById("letter-h-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-h-container").setAttribute("text", "color", "black");
@@ -1286,12 +1334,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed G");
                       document.getElementById("letter-g-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-g-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("G");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed G");
                       document.getElementById("letter-g-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-g-container").setAttribute("text", "color", "black");
@@ -1311,12 +1362,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed F");
                       document.getElementById("letter-f-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-f-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("F");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed F");
                       document.getElementById("letter-f-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-f-container").setAttribute("text", "color", "black");
@@ -1336,12 +1390,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed D");
                       document.getElementById("letter-d-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-d-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("D");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed D");
                       document.getElementById("letter-d-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-d-container").setAttribute("text", "color", "black");
@@ -1361,12 +1418,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed S");
                       document.getElementById("letter-s-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-s-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("S");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed S");
                       document.getElementById("letter-s-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-s-container").setAttribute("text", "color", "black");
@@ -1386,12 +1446,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed A");
                       document.getElementById("letter-a-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-a-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("A");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed A");
                       document.getElementById("letter-a-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-a-container").setAttribute("text", "color", "black");
@@ -1405,17 +1468,21 @@ Leap.loop({background: true}, {
               if(sessionManager.pressed.indexOf("caps-lock")>-1){
                   document.getElementById("system-capslock-container").setAttribute("material", "color", "white");
                   document.getElementById("system-capslock-container").setAttribute("text", "color", "black");
-                  console.log("holding down caps lock");\if(sessionManager.pressCount==null){
+                  console.log("holding down caps lock");
+                  if(sessionManager.pressCount==null){
                     sessionManager.pressCount = -1;
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed caps lock");
                       document.getElementById("system-capslock-container").setAttribute("material", "color", "red");
                       document.getElementById("system-capslock-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        console.log("caps lock effect");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed caps lock");
                       document.getElementById("system-capslock-container").setAttribute("material", "color", "orange");
                       document.getElementById("system-capslock-container").setAttribute("text", "color", "black");
@@ -1435,12 +1502,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed ?");
                       document.getElementById("punctuation-question-container").setAttribute("material", "color", "red");
                       document.getElementById("punctuation-question-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("?");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed ?");
                       document.getElementById("punctuation-question-container").setAttribute("material", "color", "orange");
                       document.getElementById("punctuation-question-container").setAttribute("text", "color", "black");
@@ -1461,12 +1531,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed >|.");
                       document.getElementById("symbol-greaterthan-container").setAttribute("material", "color", "red");
                       document.getElementById("symbol-greaterthan-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push(">");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed >|.");
                       document.getElementById("symbol-greaterthan-container").setAttribute("material", "color", "orange");
                       document.getElementById("symbol-greaterthan-container").setAttribute("text", "color", "black");
@@ -1486,12 +1559,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed <|,");
                       document.getElementById("symbol-lessthan-container").setAttribute("material", "color", "red");
                       document.getElementById("symbol-lessthan-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("<");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed <|,");
                       document.getElementById("symbol-lessthan-container").setAttribute("material", "color", "orange");
                       document.getElementById("symbol-lessthan-container").setAttribute("text", "color", "black");
@@ -1511,12 +1587,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed M");
                       document.getElementById("letter-m-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-m-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("M");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed M");
                       document.getElementById("letter-m-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-m-container").setAttribute("text", "color", "black");
@@ -1536,12 +1615,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed N");
                       document.getElementById("letter-n-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-n-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("N");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed N");
                       document.getElementById("letter-n-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-n-container").setAttribute("text", "color", "black");
@@ -1561,12 +1643,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed B");
                       document.getElementById("letter-b-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-b-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("B");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed B");
                       document.getElementById("letter-b-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-b-container").setAttribute("text", "color", "black");
@@ -1586,12 +1671,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed V");
                       document.getElementById("letter-v-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-v-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("V");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed V");
                       document.getElementById("letter-v-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-v-container").setAttribute("text", "color", "black");
@@ -1606,6 +1694,25 @@ Leap.loop({background: true}, {
                   document.getElementById("letter-c-container").setAttribute("material", "color", "white");
                   document.getElementById("letter-c-container").setAttribute("text", "color", "black");
                   console.log("holding down C");
+                  if(sessionManager.pressCount==null){
+                    sessionManager.pressCount = -1;
+                  }
+                  else if(sessionManager.pressCount >= -1){
+                    sessionManager.pressCount++;
+                    if(sessionManager.pressCount>25&&sessionManager.pressCount<75){
+                      console.log("pressed C");
+                      document.getElementById("letter-c-container").setAttribute("material", "color", "red");
+                      document.getElementById("letter-c-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("C");
+                      }
+                    }
+                    if(sessionManager.pressCount>75){
+                      console.log("long pressed C");
+                      document.getElementById("letter-c-container").setAttribute("material", "color", "orange");
+                      document.getElementById("letter-c-container").setAttribute("text", "color", "black");
+                    }
+                  }
               }
             }
             else if(indexPos[0]>-130&&indexPos[0]<-105&&indexPos[1]>135&&indexPos[1]<160){
@@ -1620,12 +1727,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed X");
                       document.getElementById("letter-x-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-x-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("X");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed X");
                       document.getElementById("letter-x-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-x-container").setAttribute("text", "color", "black");
@@ -1645,12 +1755,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed Z");
                       document.getElementById("letter-z-container").setAttribute("material", "color", "red");
                       document.getElementById("letter-z-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push("Z");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed Z");
                       document.getElementById("letter-z-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-z-container").setAttribute("text", "color", "black");
@@ -1670,12 +1783,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed shift");
                       document.getElementById("system-leftshift-container").setAttribute("material", "color", "red");
                       document.getElementById("system-leftshift-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        console.log("shift effect!")
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed shift");
                       document.getElementById("system-leftshift-container").setAttribute("material", "color", "orange");
                       document.getElementById("system-leftshift-container").setAttribute("text", "color", "black");
@@ -1695,12 +1811,15 @@ Leap.loop({background: true}, {
                     }
                     else if(sessionManager.pressCount >= -1){
                       sessionManager.pressCount++;
-                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                         console.log("pressed RD");
                         document.getElementById("dpad-right-container").setAttribute("material", "color", "red");
                         document.getElementById("dpad-right-container").setAttribute("text", "color", "white");
+                        if(sessionManager.pressCount==26){
+                          console.log("dpad right effect!")
+                        }
                       }
-                      if(sessionManager.pressCount>150){
+                      if(sessionManager.pressCount>75){
                         console.log("long pressed RD");
                         document.getElementById("dpad-right-container").setAttribute("material", "color", "orange");
                         document.getElementById("dpad-right-container").setAttribute("text", "color", "black");
@@ -1720,12 +1839,15 @@ Leap.loop({background: true}, {
                     }
                     else if(sessionManager.pressCount >= -1){
                       sessionManager.pressCount++;
-                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                         console.log("pressed DD");
                         document.getElementById("dpad-down-container").setAttribute("material", "color", "red");
                         document.getElementById("dpad-down-container").setAttribute("text", "color", "white");
+                        if(sessionManager.pressCount==26){
+                          console.log("dpad down effect!")
+                        }
                       }
-                      if(sessionManager.pressCount>150){
+                      if(sessionManager.pressCount>75){
                         console.log("long pressed DD");
                         document.getElementById("dpad-down-container").setAttribute("material", "color", "orange");
                         document.getElementById("dpad-down-container").setAttribute("text", "color", "black");
@@ -1745,12 +1867,15 @@ Leap.loop({background: true}, {
                     }
                     else if(sessionManager.pressCount >= -1){
                       sessionManager.pressCount++;
-                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                         console.log("pressed UD");
                         document.getElementById("dpad-up-container").setAttribute("material", "color", "red");
                         document.getElementById("dpad-up-container").setAttribute("text", "color", "white");
+                        if(sessionManager.pressCount==26){
+                          console.log("dpad up effect!")
+                        }
                       }
-                      if(sessionManager.pressCount>150){
+                      if(sessionManager.pressCount>75){
                         console.log("long pressed UD");
                         document.getElementById("dpad-up-container").setAttribute("material", "color", "orange");
                         document.getElementById("dpad-up-container").setAttribute("text", "color", "black");
@@ -1770,12 +1895,15 @@ Leap.loop({background: true}, {
                     }
                     else if(sessionManager.pressCount >= -1){
                       sessionManager.pressCount++;
-                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                         console.log("pressed LD");
                         document.getElementById("dpad-left-container").setAttribute("material", "color", "red");
-                        document.getElementById("dpad-left-container").setAttribute("text", "color", "white");'
+                        document.getElementById("dpad-left-container").setAttribute("text", "color", "white");
+                        if(sessionManager.pressCount==26){
+                          console.log("dpad left effect!")
+                        }
                       }
-                      if(sessionManager.pressCount>150){
+                      if(sessionManager.pressCount>75){
                         console.log("long pressed LD");
                         document.getElementById("dpad-left-container").setAttribute("material", "color", "orange");
                         document.getElementById("dpad-left-container").setAttribute("text", "color", "black");
@@ -1795,12 +1923,15 @@ Leap.loop({background: true}, {
                     }
                     else if(sessionManager.pressCount >= -1){
                       sessionManager.pressCount++;
-                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                         console.log("pressed ROPT");
                         document.getElementById("system-rightoption-container").setAttribute("material", "color", "red");
                         document.getElementById("system-rightoption-container").setAttribute("text", "color", "white");
+                        if(sessionManager.pressCount==26){
+                          console.log("right option effect!")
+                        }
                       }
-                      if(sessionManager.pressCount>150){
+                      if(sessionManager.pressCount>75){
                         console.log("long pressed ROPT");
                         document.getElementById("system-rightoption-container").setAttribute("material", "color", "orange");
                         document.getElementById("system-rightoption-container").setAttribute("text", "color", "black");
@@ -1820,12 +1951,15 @@ Leap.loop({background: true}, {
                     }
                     else if(sessionManager.pressCount >= -1){
                       sessionManager.pressCount++;
-                      if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                      if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                         console.log("pressed RCMD");
                         document.getElementById("system-rightcommand-container").setAttribute("material", "color", "red");
                         document.getElementById("system-rightcommand-container").setAttribute("text", "color", "white");
+                        if(sessionManager.pressCount==26){
+                          console.log("right command effect!")
+                        }
                       }
-                      if(sessionManager.pressCount>150){
+                      if(sessionManager.pressCount>75){
                         console.log("long pressed RCMD");
                         document.getElementById("system-rightcommand-container").setAttribute("material", "color", "orange");
                         document.getElementById("system-rightcommand-container").setAttribute("text", "color", "black");
@@ -1845,10 +1979,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed SPCE");
+                      document.getElementById("space-bar-container").setAttribute("material", "color", "red");
+                      document.getElementById("space-bar-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        sessionManager.outputTextStream.push(" ");
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed SPCE");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "black");
@@ -1868,10 +2007,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed CMD");
+                      document.getElementById("system-leftcommand-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-leftcommand-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        console.log("left command effect!")
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed CMD");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "black");
@@ -1891,10 +2035,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed OPTION");
+                      document.getElementById("system-leftoption-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-leftoption-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        console.log("left option effect!")
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed OPTION");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "black");
@@ -1914,10 +2063,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed CTRL");
+                      document.getElementById("system-leftcontrol-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-leftcontrol-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        console.log("left control effect!")
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed CTRL");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "black");
@@ -1937,10 +2091,15 @@ Leap.loop({background: true}, {
                   }
                   else if(sessionManager.pressCount >= -1){
                     sessionManager.pressCount++;
-                    if(sessionManager.pressCount>75&&sessionManager.pressCount<150){
+                    if(220sessionManager.pressCount>25&&sessionManager.pressCount<75){
                       console.log("pressed FN");
+                      document.getElementById("system-function-container").setAttribute("material", "color", "red");
+                      document.getElementById("system-function-container").setAttribute("text", "color", "white");
+                      if(sessionManager.pressCount==26){
+                        console.log("function effect!")
+                      }
                     }
-                    if(sessionManager.pressCount>150){
+                    if(sessionManager.pressCount>75){
                       console.log("long pressed FN");
                       document.getElementById("letter-q-container").setAttribute("material", "color", "orange");
                       document.getElementById("letter-q-container").setAttribute("text", "color", "black");
@@ -2026,7 +2185,7 @@ Leap.loop({background: true}, {
 
     sessionManager.pressCount == -1;
     sessionManager.pressed = [];
-
+    console.log(JSON.stringify(sessionManager.outputTextStream));
     renderer.render(scene, camera);
 })
 .connect();
